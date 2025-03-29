@@ -1,0 +1,247 @@
+.navbar {
+    width: 100%;
+    background-color: #fff;
+    /* padding: 10px 20px; */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;padding: 10px 80px;
+  }
+  
+  .logo-site {
+    flex: 1;
+  }
+  
+  .logo-site img {
+    height: 100px;width: auto;
+  }
+  
+  .info-column {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .top-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .top-row a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .top-row a:hover {
+    color: #007bff;
+  }
+  
+  .dropdown {
+    cursor: pointer;
+  }
+  
+  .bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+  
+  .search-bar {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 50%;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    outline: none;
+  }
+  
+  .search-bar button {
+    background-color: #6b4f36;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icons img {
+    width: auto;
+    cursor: pointer;height: 25px;
+    transition: transform 0.3s;
+  }
+  
+  .icons img:hover {
+    transform: scale(1.1);
+  }
+  
+  .navbar-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    padding: 10px 80px;
+  }
+  
+  .categories button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .menu-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .menu-links a:hover {
+    color: #007bff;
+  }
+  
+  .delivery-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+  
+  .delivery-info img {
+    width: auto;height: 25px;
+  }
+  
+  /* Two Column Section */
+  .about-two-column-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .about-column {
+    flex: 1;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Image Section */
+  .about-image-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+  }
+  
+  .about-centered-image {
+    width: 70%;
+    border-radius: 70%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Second Two Column Section */
+  .about-second-two-column {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .about-second-column {
+    flex: 1;
+    padding: 20px;
+    background: #eaf2ff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Achievements Section */
+  .about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+    gap: 20px;
+  }
+  
+  .about-text-section {
+    flex: 0.6;
+  }
+  
+  .about-text-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .about-counter-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .about-counter {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-image-section {
+    flex: 0.4;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-image-section img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-two-column-container,
+    .about-second-two-column {
+      flex-direction: column;
+    }
+  
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-counter-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-counter-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  

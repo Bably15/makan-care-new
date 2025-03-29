@@ -1,0 +1,82 @@
+.plumbing-product-container{
+    width: 80%;
+    font-family: Arial, sans-serif;
+    MARGIN: auto;
+    padding: 30px;
+}
+
+.product-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.product-rating {
+  font-size: 14px;
+  color: gray;
+}
+
+.product-star {
+  color: purple;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.product-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.product-edit-button {
+  background-color: #fff;
+  border: 1px solid black;
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.product-add-button {
+  background-color: #6b4f36;
+  /* border: 1px solid purple; */
+  color:#fff;
+  padding: 10px 20px;
+  /* margin-left: 10px; */
+  cursor: pointer;
+  border-radius: 5px;
+}
+.product-add-button:hover{
+    background-color: #333
+}
+
+.product-links-container {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+}
+
+.product-link {
+  display: block;
+  /* color: blue; */
+  text-decoration: none;
+  margin-top: 5px;
+}
+.product-item img{
+    width: auto;
+    height: 120px;
+    margin-bottom: 5px;
+    border-radius: 10px
+}
+.product-item p{
+    text-align: center;
+    color: black;
+}
+.plumbing-product-container h3{
+    text-align: center;
+}

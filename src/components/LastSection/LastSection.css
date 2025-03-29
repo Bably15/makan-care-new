@@ -1,0 +1,27 @@
+.last-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 80px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+/* img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+} */
+.last-section .column p {
+    margin: 0px;
+    line-height: 1.5em;
+}

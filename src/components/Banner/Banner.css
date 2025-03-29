@@ -1,0 +1,47 @@
+.banner {
+  position: relative;
+  width: auto;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 25px;
+}
+
+.banner-content {
+  max-width: 50%;
+  color: #222;
+}
+
+.sale-text {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 5px 0;
+  } */
+
+.price-text {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.shop-btn {
+  background-color: #7a5c41;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.shop-btn:hover {
+  background-color: #5c4531;
+}

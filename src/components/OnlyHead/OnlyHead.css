@@ -1,0 +1,136 @@
+.navbar {
+    width: 100%;
+    background-color: #fff;
+    /* padding: 10px 20px; */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;padding: 10px 80px;
+  }
+  
+  .logo-site {
+    flex: 1;
+  }
+  
+  .logo-site img {
+    height: 100px;width: auto;
+  }
+  
+  .info-column {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .top-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .top-row a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .top-row a:hover {
+    color: #090909;
+  }
+  
+  .dropdown {
+    cursor: pointer;
+  }
+  
+  .bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-top: 5px;
+  }
+  
+  .search-bar {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 50%;margin-right: 30px;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    outline: none;
+  }
+  
+  .search-bar button {
+    background-color: #6b4f36;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icons img {
+    width: auto;
+    cursor: pointer;height: 25px;
+    transition: transform 0.3s;
+  }
+  
+  .icons img:hover {
+    transform: scale(1.1);
+  }
+  
+  .navbar-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    padding: 10px 80px;
+  }
+  
+  .categories button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .menu-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #6b4f36;
+    transition: color 0.3s;
+  }
+  
+  .menu-links a:hover {
+    color: #333;
+  }
+  
+  .delivery-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+  
+  .delivery-info img {
+    width: auto;height: 25px;
+  }
+  .Logincolor{
+    color: #6b4f36;margin: 0 90px;
+  }
