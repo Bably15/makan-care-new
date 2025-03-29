@@ -1,6 +1,14 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../features/cart/cartSlice";
+import useCart from "../../hooks/useCart";
 
-const ServiceCard = ({ title, rating, reviews, price, duration, services }) => {
+const ServiceCard = ({ service }) => {
+    const { serviceId, title, rating, reviews, price, duration, services } =
+        service;
+
+    const { handleAddToCart } = useCart();
+
     return (
         <div className="p-4 py-10 w-full border-b-1 border-gray-200">
             <div className="flex justify-between items-start">
@@ -18,11 +26,14 @@ const ServiceCard = ({ title, rating, reviews, price, duration, services }) => {
 
                     {/* Price and Duration */}
                     <p className="text-gray-900 font-bold mt-2">
-                        ₹{price} • {duration}
+                        ${price} • {duration}
                     </p>
                 </div>
 
-                <button className="border border-[#6E42E5] text-[#6E42E5] px-4 py-2 rounded-md">
+                <button
+                    className="border border-[#6E42E5] text-[#6E42E5] hover:bg-[#6E42E5] hover:text-white px-4 py-2 rounded-md cursor-pointer"
+                    onClick={() => handleAddToCart(service)}
+                >
                     Add
                 </button>
             </div>
@@ -39,11 +50,11 @@ const ServiceCard = ({ title, rating, reviews, price, duration, services }) => {
             </ul>
 
             {/* Buttons */}
-            <div className="flex justify-between items-center mt-4">
+            {/* <div className="flex justify-between items-center mt-4">
                 <button className="font-bold border border-gray-400 px-4 py-2 rounded-md text-gray-800">
                     Edit your package
                 </button>
-            </div>
+            </div> */}
         </div>
     );
 };

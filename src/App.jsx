@@ -21,15 +21,18 @@ import { BrowserRouter } from "react-router-dom";
 import store from "./store/index.js";
 import OnlyHead from "./components/OnlyHead/OnlyHead.jsx";
 import Header from "./layouts/header/Header.jsx";
+import { ToastProvider } from "./context/ToastContext.jsx";
 
 const App = () => {
     return (
         <Provider store={store}>
             <BrowserRouter>
-                <Header />
-                <AppRoutes />
-                <Footer />
-                {/* <Footer2 /> */}
+                <ToastProvider>
+                    <Header />
+                    <AppRoutes />
+                    <Footer />
+                    {/* <Footer2 /> */}
+                </ToastProvider>
             </BrowserRouter>
         </Provider>
     );

@@ -10,6 +10,7 @@ import Electric1 from "../../assets/wiring.jpeg";
 import Electric2 from "../../assets/lightrepair.jpg";
 import Electric3 from "../../assets/circutrepair.jpg";
 import Card from "../Card/Card";
+import { v4 as uuidv4 } from "uuid";
 
 const categories = {
     Gardening: [
@@ -28,8 +29,9 @@ const categories = {
         { name: "Water Heaters Repair & Installation", img: Plumbing3 },
     ],
 };
-const products = [
+const services = [
     {
+        id: uuidv4(),
         image: Lawn,
         category: "Gadget Zone",
         name: "Multicolored Open-Knit Crewneck",
@@ -37,6 +39,7 @@ const products = [
         price: 79.0,
     },
     {
+        id: uuidv4(),
         image: Electric1,
         category: "Initech space",
         name: "Apple Smart Watch / Midnight Aluminum",
@@ -45,6 +48,7 @@ const products = [
         oldPrice: 58.0,
     },
     {
+        id: uuidv4(),
         image: Electric2,
         category: "Initech space",
         name: "Apple Smart Watch / Midnight Aluminum",
@@ -53,6 +57,7 @@ const products = [
         oldPrice: 58.0,
     },
     {
+        id: uuidv4(),
         image: Electric3,
         category: "Pro Tech Gear",
         name: "Cropped Satin Bomber Jacket",
@@ -60,6 +65,7 @@ const products = [
         price: 94.0,
     },
     {
+        id: uuidv4(),
         image: Plumbing1,
         category: "Soylent Green",
         name: "Mens Cotton Casual Short Sleeve T-Shirts",
@@ -67,6 +73,7 @@ const products = [
         price: 86.0,
     },
     {
+        id: uuidv4(),
         image: Plumbing2,
         category: "Gadget Zone",
         name: "Multicolored Open-Knit Crewneck",
@@ -74,67 +81,6 @@ const products = [
         price: 79.0,
     },
 ];
-
-// const CategoryTabs = () => {
-//     const categoryRef = useRef(null);
-//     const buttonsRef = useRef(null);
-//     const defaultCategory = "Gardening"; // Default category
-
-//     const handleClick = (category) => {
-//         if (categoryRef.current) {
-//             categoryRef.current.innerHTML = `
-//         <div class="product-grid">
-//           ${categories[category]
-//               .map(
-//                   (item) => `
-//             <div class="product-card">
-//               <img src="${item.img}" alt="${item.name}" />
-//               <p>${item.name}</p>
-//             </div>
-//           `
-//               )
-//               .join("")}
-//         </div>
-//       `;
-//         }
-
-//         // Remove 'active' class from all buttons and set clicked one
-//         if (buttonsRef.current) {
-//             Array.from(buttonsRef.current.children).forEach((btn) =>
-//                 btn.classList.remove("active")
-//             );
-//             const clickedButton = Array.from(buttonsRef.current.children).find(
-//                 (btn) => btn.innerText === category
-//             );
-//             if (clickedButton) clickedButton.classList.add("active");
-//         }
-//     };
-
-//     // Set default category on mount
-//     useEffect(() => {
-//         handleClick(defaultCategory);
-//     }, []);
-
-//     return (
-//         <div className="category-container">
-//             {/* Categories */}
-//             <div className="category-buttons" ref={buttonsRef}>
-//                 {Object.keys(categories).map((category) => (
-//                     <button
-//                         key={category}
-//                         className={category === defaultCategory ? "active" : ""}
-//                         onClick={() => handleClick(category)}
-//                     >
-//                         {category}
-//                     </button>
-//                 ))}
-//             </div>
-
-//             {/* Subcategories Grid */}
-//             <div ref={categoryRef} className="subcategory-container"></div>
-//         </div>
-//     );
-// };
 
 const CategoryTabs = () => {
     return (
@@ -166,12 +112,12 @@ const CategoryTabs = () => {
             <div className="w-full py-5">
                 <div className="max-w-7xl mx-auto p-4">
                     <div className="flex flex-wrap -mx-2">
-                        {products.map((product, index) => (
+                        {services.map((service, index) => (
                             <div
                                 key={index}
                                 className="w-6/12 sm:w-4/12 lg:w-2/12"
                             >
-                                <Card {...product} />
+                                <Card service={service} />
                             </div>
                         ))}
                     </div>

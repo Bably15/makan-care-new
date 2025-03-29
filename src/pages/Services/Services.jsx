@@ -19,6 +19,8 @@ import HAIR_CARE from "../../assets/hair_care.png";
 import CART_IMG from "../../assets/cart2.png";
 import DISCOUNT_IMG from "../../assets/discount.png";
 import QUALITY_ASSURED_IMG from "../../assets/quality_assured.png";
+import { services } from "../../mocks/services";
+import { useSelector } from "react-redux";
 
 const listOfServices = [
     { name: "Packages", image: PACKAGES_IMG },
@@ -32,12 +34,13 @@ const listOfServices = [
 ];
 
 const Services = () => {
+    const cartData = useSelector((state) => state.cart);
     return (
         <>
             <div className="w-full py-5 pt-14">
                 <div className="max-w-7xl mx-auto p-4">
                     <div className="flex flex-wrap -mx-2">
-                        <div className="w-full md:w-3/12 p-0 sm:p-5">
+                        <div className="w-full md:w-3/12 p-0 sm:p-5 h-screen sticky top-0">
                             <h1 className="text-3xl font-bold mb-4">
                                 Salon Classic
                             </h1>
@@ -72,42 +75,51 @@ const Services = () => {
                             </div>
                         </div>
 
-                        <div className="w-full md:w-6/12 p-0 sm:p-5 border-x-1 border-gray-100">
-                            {[1, 2, 3, 4, 5].map((service, index) => (
-                                <ServiceCard
-                                    key={index}
-                                    title="Complete face care"
-                                    rating="4.84"
-                                    reviews="1.7M"
-                                    price="667"
-                                    duration="1 hr 20 mins"
-                                    services={[
-                                        {
-                                            type: "Threading",
-                                            details: "Eyebrow, Upper lip",
-                                        },
-                                        {
-                                            type: "Facial",
-                                            details:
-                                                "Crave beauty hydrating banana facial",
-                                        },
-                                    ]}
-                                />
+                        <div className="w-full md:w-6/12 p-0 sm:p-5 border-x-1 border-gray-200">
+                            {services.map((service, index) => (
+                                <ServiceCard key={index} service={service} />
                             ))}
                         </div>
 
-                        <div className="w-full md:w-3/12 p-0 sm:p-5">
-                            <div className="flex flex-col items-center border border-gray-100 rounded-lg p-5 mb-5">
-                                <img
-                                    className="mb-5"
-                                    src={CART_IMG}
-                                    alt="cart icon"
-                                />
-                                <p className="text-gray-600">
-                                    No items in your cart
-                                </p>
+                        <div className="w-full md:w-3/12 p-0 sm:p-5 h-screen sticky top-0">
+                            <div className="border border-gray-200 rounded-lg p-5 mb-5">
+                                {cartData.items.length ? (
+                                    <>
+                                        <h2 className="text-xl font-bold mb-5">
+                                            Cart
+                                        </h2>
+                                        {cartData.items.map((item) => (
+                                            <div
+                                                key={item.id}
+                                                className="text-sm text-gray-600 flex justify-between gap-4 mb-4"
+                                            >
+                                                <h3>{item.title}</h3>
+                                                <div>${item.price}</div>
+                                            </div>
+                                        ))}
+                                        <div className="border-t-1 border-gray-300 pt-5">
+                                            <div className="flex justify-between gap-4">
+                                                <h3>Total</h3>
+                                                <div>
+                                                    ${cartData.totalPrice}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </>
+                                ) : (
+                                    <div className="flex flex-col items-center">
+                                        <img
+                                            className="mb-5"
+                                            src={CART_IMG}
+                                            alt="cart icon"
+                                        />
+                                        <p className="text-xs text-gray-600">
+                                            No items in your cart
+                                        </p>
+                                    </div>
+                                )}
                             </div>
-                            <div className="flex flex-col border border-gray-100 rounded-lg p-5 mb-5">
+                            <div className="flex flex-col border border-gray-200 rounded-lg p-5 mb-5">
                                 <div className="flex items-start mb-4">
                                     <div className="bg-gray-100 rounded-lg p-2 mb-5 mr-4">
                                         <img
@@ -115,8 +127,8 @@ const Services = () => {
                                             alt="discount"
                                         />
                                     </div>
-                                    <div>
-                                        <h3 className="font-bold mb-4">
+                                    <div className="text-xs">
+                                        <h3 className="font-bold mb-2">
                                             Assured reward from CRED
                                         </h3>
                                         <p className="text-gray-600">
@@ -128,15 +140,24 @@ const Services = () => {
                                     View More Offers
                                 </div>
                             </div>
-                            <div className="flex items-start border border-gray-100 rounded-lg p-5 mb-5">
+                            <div className="flex items-start border border-gray-200 rounded-lg p-5 mb-5">
                                 <div>
                                     <h3 className="text-2xl font-bold mb-5">
                                         UC Promise
                                     </h3>
-                                    <ul>
-                                        <li>4.5+ Rated Beauticians</li>
-                                        <li>Luxury Salon Experience</li>
-                                        <li>Premium Branded Products</li>
+                                    <ul className="text-xs">
+                                        <li className="mb-3">
+                                            <i class="fa-solid fa-check mr-2"></i>
+                                            4.5+ Rated Beauticians
+                                        </li>
+                                        <li className="mb-3">
+                                            <i class="fa-solid fa-check mr-2"></i>
+                                            Luxury Salon Experience
+                                        </li>
+                                        <li className="mb-3">
+                                            <i class="fa-solid fa-check mr-2"></i>
+                                            Premium Branded Products
+                                        </li>
                                     </ul>
                                 </div>
 

@@ -1,10 +1,15 @@
+import { v4 as uuidv4 } from "uuid";
+
 import Card from "../Card/Card";
+
 import image1 from "../../assets/slide2.png";
 import image2 from "../../assets/pic7.png";
 import image3 from "../../assets/small.png";
+
 const RenovationsFabrications = () => {
     const services = [
         {
+            id: uuidv4(),
             category: "Initech Space",
             name: "Apple Smart Watch / Midnight Aluminum",
             image: image1,
@@ -13,6 +18,7 @@ const RenovationsFabrications = () => {
             originalPrice: "58.00",
         },
         {
+            id: uuidv4(),
             category: "Massive Dynamic",
             name: "BoAt Lite Smartwatch 1.69 Inches HD Display",
             image: image2,
@@ -21,6 +27,7 @@ const RenovationsFabrications = () => {
             originalPrice: "69.00",
         },
         {
+            id: uuidv4(),
             category: "Pro Tech Gear",
             name: "Cropped Satin Bomber Jacket",
             image: image3,
@@ -66,7 +73,7 @@ const RenovationsFabrications = () => {
                                 key={index}
                                 className="w-full sm:w-4/12 lg:w-4/12 p-2"
                             >
-                                <Card {...service} />
+                                <Card service={service} />
                             </div>
                         ))}
                     </div>
