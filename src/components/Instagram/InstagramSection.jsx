@@ -14,7 +14,7 @@ const InstagramSection = () => {
     ];
 
     return (
-        <div className="w-full py-14 bg-[#F5F5F5]">
+        <div className="w-full py-14 bg-gray-100">
             <div className="max-w-7xl mx-auto p-4">
                 <div className="flex flex-col items-center text-center">
                     <h2 className="font-medium text-2xl mb-10">
@@ -38,19 +38,3 @@ const InstagramSection = () => {
 };
 
 export default InstagramSection;
-// <div className="instagram-section">
-//   <h2>Instagram</h2>
-//   <div className="posts">
-//     {posts.map((post) => (
-//       <div key={post.id} className="post" onClick={() => handleImageClick(post.imageUrl)}>
-//         <img src={post.imageUrl} alt={`Post ${post.id}`} />
-//       </div>
-//     ))}
-//   </div>
-
-//   {selectedImage && (
-//     <div className="modal" onClick={handleCloseModal}>
-//       <img src={selectedImage} alt="Selected Post" className="modal-image" />
-//     </div>
-//   )}
-// </div>

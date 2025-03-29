@@ -1,7 +1,8 @@
 import "./App.css";
 import Hero from "./components/hero/Hero.jsx";
 import Section1 from "./components/section1/Section1.jsx";
-import Footer from "./components/Footer/Footer.jsx";
+import Footer2 from "./components/Footer/Footer.jsx";
+import Footer from "./layouts/footer/Footer.jsx";
 import LastSection from "./components/LastSection/LastSection.jsx";
 import InstagramSection from "./components/Instagram/InstagramSection.jsx";
 import BlogSite from "./components/Blogsite/BlogSite.jsx";
@@ -21,46 +22,14 @@ import store from "./store/index.js";
 import OnlyHead from "./components/OnlyHead/OnlyHead.jsx";
 import Header from "./layouts/header/Header.jsx";
 
-// function App() {
-//     return (
-//         <div>
-//             <Hero />
-//             <Section1 />
-//             <Section2 />
-//             {/* <Section3 /> */}
-//             <CategoryWiseProductDisplay />
-//             <BlogSite />
-
-//             {/* <InstagramSection /> */}
-//             <LastSection />
-//             <Footer />
-//         </div>
-//         // <div>
-//         //   <ProductPage />
-//         // </div>
-//         // <div>
-//         //   <About2 />
-//         // </div>
-//         // <div>
-//         //   <ContactUs />
-//         // </div>
-//         // <div>
-//         //   <Product_Site />
-//         // </div>
-//         // <div>
-//         //   <Plumbing_Product/>
-//         // </div>
-//     );
-// }
-
 const App = () => {
     return (
         <Provider store={store}>
             <BrowserRouter>
-                {/* <OnlyHead /> */}
                 <Header />
                 <AppRoutes />
                 <Footer />
+                {/* <Footer2 /> */}
             </BrowserRouter>
         </Provider>
     );
