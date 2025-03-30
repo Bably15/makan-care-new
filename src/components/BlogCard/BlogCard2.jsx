@@ -2,7 +2,7 @@ import React from "react";
 
 const BlogCard2 = ({ image, date, title, description }) => {
     return (
-        <div className="rounded-lg overflow-hidden">
+        <div className="rounded-lg overflow-hidden p-4 border border-gray-200 shadow-lg">
             <img src={image} alt="Blog" className="w-full h-48 object-cover" />
             <div className="py-5">
                 <p className="text-xs text-red-500 flex items-center">
@@ -15,7 +15,7 @@ const BlogCard2 = ({ image, date, title, description }) => {
                 <p className="text-gray-600 text-sm mt-2">{description}</p>
                 <a
                     href="#"
-                    className="underline text-red-500 text-sm font-medium mt-3 inline-block"
+                    className="bg-[#6b4f36] text-white text-sm px-8 py-2 rounded-lg font-medium mt-3 inline-block"
                 >
                     READ MORE
                 </a>

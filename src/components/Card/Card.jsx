@@ -2,7 +2,7 @@ import React from "react";
 import useCart from "../../hooks/useCart";
 
 const Card = ({ service }) => {
-    const { image, category, title, rating, price } = service;
+    const { image, category, title, description, rating, price } = service;
     const { handleAddToCart } = useCart();
 
     return (
@@ -14,8 +14,10 @@ const Card = ({ service }) => {
             />
 
             <div className="mt-4">
-                <p className="text-gray-500 text-xs font-roboto">{category}</p>
-                <h3 className="text-sm font-normal font-roboto">{title}</h3>
+                <h3 className="text-sm font-normal font-roboto mb-4">
+                    {title}
+                </h3>
+                <p className="text-xs text-gray-600">{description}</p>
 
                 <div className="flex mt-1 mb-4">
                     {Array(5)
