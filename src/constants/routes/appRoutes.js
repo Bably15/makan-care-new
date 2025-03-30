@@ -7,4 +7,7 @@ export const APPROUTES = {
     SERVICES: "/services",
     SERVICE_DETAIL: "/services/:service",
     SERVICES_REDIRECT: "/services/gardening",
+    CART: "/cart",
+    SHIPPING: "/shipping",
+    CHECKOUT: "/checkout",
 };

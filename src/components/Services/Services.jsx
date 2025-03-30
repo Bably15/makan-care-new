@@ -22,6 +22,8 @@ import QUALITY_ASSURED_IMG from "../../assets/quality_assured.png";
 // import { services } from "../../mocks/services";
 import { useSelector } from "react-redux";
 import { COMMON_CONSTANTS } from "../../constants/common/commonConstants";
+import { APPROUTES } from "../../constants/routes/appRoutes";
+import { Link } from "react-router-dom";
 
 // const listOfServices = [
 //     { name: "Packages", image: PACKAGES_IMG },
@@ -105,7 +107,7 @@ const Services = ({ service }) => {
                                                 </div>
                                             </div>
                                         ))}
-                                        <div className="border-t-1 border-gray-300 pt-5">
+                                        <div className="border-t-1 border-gray-300 py-5">
                                             <div className="flex justify-between gap-4">
                                                 <h3>Total</h3>
                                                 <div className="whitespace-nowrap">
@@ -115,6 +117,14 @@ const Services = ({ service }) => {
                                                     )}
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div className="flex justify-stretch">
+                                            <Link
+                                                to={APPROUTES.CART}
+                                                className="bg-[#6E42E5] p-2 w-full text-white text-center rounded-lg"
+                                            >
+                                                View my Cart
+                                            </Link>
                                         </div>
                                     </>
                                 ) : (

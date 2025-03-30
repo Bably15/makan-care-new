@@ -118,16 +118,18 @@ const Header = () => {
                                         src={HEART_ICON}
                                         alt="Cart"
                                     />
-                                    <div className="relative">
-                                        <span className="flex justify-center items-center text-xs text-center bg-red-400 text-white rounded-full w-5 h-5 p-2 absolute -right-1 -top-2">
-                                            {cartData.totalQuantity}
-                                        </span>
-                                        <img
-                                            className="w-6 mx-2"
-                                            src={CART_ICON}
-                                            alt="Wishlist"
-                                        />
-                                    </div>
+                                    <Link to={APPROUTES.CART}>
+                                        <div className="relative">
+                                            <span className="flex justify-center items-center text-xs text-center bg-red-400 text-white rounded-full w-5 h-5 p-2 absolute -right-1 -top-2">
+                                                {cartData.totalQuantity}
+                                            </span>
+                                            <img
+                                                className="w-6 mx-2"
+                                                src={CART_ICON}
+                                                alt="Wishlist"
+                                            />
+                                        </div>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

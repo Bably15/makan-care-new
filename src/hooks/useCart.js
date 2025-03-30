@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { addToCart } from "../features/cart/cartSlice";
+import { addToCart, removeFromCart } from "../features/cart/cartSlice";
 import { useToast } from "../context/ToastContext";
 import { ToastType } from "../constants/enums/toastTypes";
 
@@ -26,7 +26,16 @@ const useCart = () => {
         }
     };
 
-    return { handleAddToCart };
+    const removeServiceFromCart = (serviceId) => {
+        dispatch(removeFromCart(serviceId));
+        showToast(
+            ToastType.SUCCESS,
+            "Service removed from cart!",
+            "You have successfully removed the service from your cart."
+        );
+    };
+
+    return { handleAddToCart, removeServiceFromCart };
 };
 
 export default useCart;
