@@ -3,10 +3,8 @@ import store from "../store/index";
 import { logout } from "../features/auth/authSlice";
 import { toast } from "react-toastify";
 
-// Base URL - Replace with your backend URL
-const API_BASE_URL = "https://your-api-url.com/api";
+const API_BASE_URL = "https://backend-api-url.com/api";
 
-// Create Axios Instance
 const api = axios.create({
     baseURL: API_BASE_URL,
     headers: {
@@ -14,7 +12,6 @@ const api = axios.create({
     },
 });
 
-// Request Interceptor - Attach Token Automatically
 api.interceptors.request.use(
     (config) => {
         const state = store.getState();
@@ -27,7 +24,6 @@ api.interceptors.request.use(
     (error) => Promise.reject(error)
 );
 
-// Response Interceptor - Handle Errors
 api.interceptors.response.use(
     (response) => response,
     (error) => {

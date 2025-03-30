@@ -1,4 +1,4 @@
 export const APIENDPOINTS = {
-    LOGIN: "/auth/login",
-    SIGNUP: "/auth/signup",
+    LOGIN: "/user/login",
+    SIGNUP: "/user/register",
 };
