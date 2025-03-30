@@ -10,33 +10,6 @@ import bannerimg from "../../assets/pic4.png";
 import CategoryTabs from "../Categorytabs/Categorytabs";
 import WallMakeover from "../WallMakeovers/WallMakeovers.jsx";
 
-// const Section1 = () => {
-//   return (
-//     <div className="second-sec">
-//       <div className="section-container">
-//         <div className="banner-container">
-//           <div className="banner-item">
-//             <img src={menu_img} alt="" srcset="" />
-//           </div>
-//           <div className="banner-item">
-//             <img src={menu_img2} alt="" srcset="" />
-//           </div>
-//           <div className="banner-item">
-//             <img src={menu_img3} alt="" srcset="" />
-//           </div>
-//         </div>
-
-//         <CategoryTabs />
-//         <div className="wall-makeover" style={{ backgroundImage: `url(${bannerimg})` }}>
-//           {/* <h2>Wall Makeovers</h2>
-//           <p>Revamp Your Space, Not Your Budget</p>
-//           <button>Book Now</button> */}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
 const Section1 = () => {
     return (
         <>
@@ -44,13 +17,13 @@ const Section1 = () => {
                 <div className="max-w-7xl mx-auto p-4">
                     <div className="flex flex-wrap -mx-2">
                         <div className="w-full sm:w-4/12">
-                            <img src={menu_img} alt="" srcset="" />
+                            <img src={menu_img} alt="" />
                         </div>
                         <div className="w-full sm:w-4/12">
-                            <img src={menu_img2} alt="" srcset="" />
+                            <img src={menu_img2} alt="" />
                         </div>
                         <div className="w-full sm:w-4/12">
-                            <img src={menu_img3} alt="" srcset="" />
+                            <img src={menu_img3} alt="" />
                         </div>
                     </div>
                 </div>

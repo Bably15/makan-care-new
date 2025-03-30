@@ -5,11 +5,12 @@ import picB from "../../assets/p2.png";
 import picC from "../../assets/p3.png";
 import picD from "../../assets/p4.png";
 import picE from "../../assets/p5.png";
+import { COMMON_CONSTANTS } from "../../constants/common/commonConstants";
 
 const data = [
     {
         title: "Fast Service",
-        description: "For all Orders Over $50",
+        description: `For all Orders Over ${COMMON_CONSTANTS.currency} 50`,
         icon: picA,
     },
     {

@@ -4,6 +4,7 @@ import chat_img from "../../assets/chatbot.png";
 import Subscribe from "../subscribebox/Subscribe";
 import Footbase from "../footersection/Footbase";
 import { Link } from "react-router-dom";
+import { APPROUTES } from "../../constants/routes/appRoutes";
 const Footer = () => {
     return (
         <div>
@@ -43,13 +44,13 @@ const Footer = () => {
                     <div className="footer-column">
                         <h3>Quick Links</h3>
                         <p>
-                            <Link to={"/contact"}>Contact Us</Link>
+                            <Link to={APPROUTES.CONTACT}>Contact Us</Link>
                         </p>
                         <p>
-                            <Link to={"/services"}>Services</Link>
+                            <Link to={APPROUTES.SERVICES}>Services</Link>
                         </p>
                         <p>
-                            <Link to={"/about"}>About Us</Link>
+                            <Link to={APPROUTES.ABOUT}>About Us</Link>
                         </p>
                         <p>Best Services</p>
                         {/* <p>Shipping & Delivery</p> */}

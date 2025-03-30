@@ -11,7 +11,7 @@ const Toast = ({ type, message, description, onClose, duration = 3000 }) => {
     }, [onClose, duration]);
 
     return (
-        <div className="fixed bottom-5 right-5 max-w-100 bg-white px-4 py-2 border border-gray-200 rounded shadow-lg animate-slide-in">
+        <div className="fixed bottom-5 right-5 max-w-100 bg-white p-4 border border-gray-200 rounded shadow-lg animate-slide-in">
             <div className="flex justify-between mb-2">
                 <span>
                     {type.icon} {message}

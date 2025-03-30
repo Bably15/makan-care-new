@@ -28,9 +28,9 @@ const App = () => {
         <Provider store={store}>
             <BrowserRouter>
                 <ToastProvider>
-                    <Header />
+                    {/* <Header /> */}
                     <AppRoutes />
-                    <Footer />
+                    {/* <Footer /> */}
                     {/* <Footer2 /> */}
                 </ToastProvider>
             </BrowserRouter>

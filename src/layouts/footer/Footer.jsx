@@ -11,6 +11,7 @@ import mastercardIcon from "../../assets/mastercard.png";
 import paypalIcon from "../../assets/paypal.png";
 import amexIcon from "../../assets/amex.png";
 import cbIcon from "../../assets/cartblue.png";
+import { APPROUTES } from "../../constants/routes/appRoutes";
 
 const Footer = () => {
     return (
@@ -53,16 +54,18 @@ const Footer = () => {
                                 Quick Links
                             </h3>
                             <p className="text-gray-400 mb-3 text-sm">
-                                <Link to={"/contact"}>Contact Us</Link>
+                                <Link to={APPROUTES.CONTACT}>Contact Us</Link>
                             </p>
                             <p className="text-gray-400 mb-3 text-sm">
-                                <Link to={"/services"}>Services</Link>
+                                <Link to={APPROUTES.SERVICES}>Services</Link>
                             </p>
                             <p className="text-gray-400 mb-3 text-sm">
-                                <Link to={"/about"}>About Us</Link>
+                                <Link to={APPROUTES.ABOUT}>About Us</Link>
                             </p>
                             <p className="text-gray-400 mb-3 text-sm">
-                                <Link to={"/services"}>Best Services</Link>
+                                <Link to={APPROUTES.SERVICES}>
+                                    Best Services
+                                </Link>
                             </p>
                         </div>
                         <div>

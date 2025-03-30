@@ -1,4 +1,5 @@
 import TRUCK_IMG from "../../assets/truck.png";
+import { COMMON_CONSTANTS } from "../../constants/common/commonConstants";
 
 const Features = () => {
     return (
@@ -17,12 +18,13 @@ const Features = () => {
                         <div className="w-full sm:w-4/12 lg:w-4/12 p-2">
                             <p>
                                 Free Delivery Now On Your First Order and over
-                                $200
+                                {COMMON_CONSTANTS.currency} 200
                             </p>
                         </div>
                         <div className="w-full sm:w-4/12 lg:w-4/12 p-2">
                             <h2 className="text-2xl font-bold">
-                                - STARTING FROM Only $200*
+                                - STARTING FROM Only {COMMON_CONSTANTS.currency}{" "}
+                                200*
                             </h2>
                         </div>
                     </div>

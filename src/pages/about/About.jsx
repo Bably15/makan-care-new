@@ -30,6 +30,7 @@ import TEAM_MEMBER_8_IMG from "../../assets/team_8.png";
 import BLOG_1_IMG from "../../assets/blog_1.png";
 import BLOG_2_IMG from "../../assets/blog_2.png";
 import BLOG_3_IMG from "../../assets/blog_3.png";
+import { COMMON_CONSTANTS } from "../../constants/common/commonConstants";
 
 const teamMembers = [
     {
@@ -214,7 +215,7 @@ const About = () => {
                                 </div>
                                 <div className="rounded-lg border border-gray-200 bg-white text-center p-5">
                                     <div className="text-3xl font-normal mb-2">
-                                        $2.2M
+                                        {COMMON_CONSTANTS.currency} 2.2M
                                     </div>
                                     <div className="text-sm text-gray-500">
                                         Pre-Seed Round

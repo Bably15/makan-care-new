@@ -2,10 +2,19 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../features/cart/cartSlice";
 import useCart from "../../hooks/useCart";
+import { COMMON_CONSTANTS } from "../../constants/common/commonConstants";
 
 const ServiceCard = ({ service }) => {
-    const { serviceId, title, rating, reviews, price, duration, services } =
-        service;
+    const {
+        id,
+        title,
+        description,
+        rating,
+        reviews,
+        price,
+        duration,
+        services,
+    } = service;
 
     const { handleAddToCart } = useCart();
 
@@ -14,7 +23,7 @@ const ServiceCard = ({ service }) => {
             <div className="flex justify-between items-start">
                 <div>
                     {/* Header */}
-                    <p className="text-green-600 text-sm font-bold">PACKAGE</p>
+                    {/* <p className="text-green-600 text-sm font-bold">PACKAGE</p> */}
                     <h2 className="text-lg font-bold mt-1">{title}</h2>
 
                     {/* Rating and Reviews */}
@@ -26,7 +35,8 @@ const ServiceCard = ({ service }) => {
 
                     {/* Price and Duration */}
                     <p className="text-gray-900 font-bold mt-2">
-                        ${price} • {duration}
+                        {COMMON_CONSTANTS.currency} {price.toFixed(2)} •{" "}
+                        {duration}
                     </p>
                 </div>
 
@@ -40,14 +50,15 @@ const ServiceCard = ({ service }) => {
             <hr className="my-4 w-40 text-gray-200" />
 
             {/* Services List */}
-            <ul className="text-gray-700 text-sm">
+            {/* <ul className="text-gray-700 text-sm">
                 {services &&
                     services.map((service, index) => (
                         <li key={index}>
                             <strong>{service.type}:</strong> {service.details}
                         </li>
                     ))}
-            </ul>
+            </ul> */}
+            <p className="text-gray-700 text-sm">{description}</p>
 
             {/* Buttons */}
             {/* <div className="flex justify-between items-center mt-4">
