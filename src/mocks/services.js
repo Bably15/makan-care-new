@@ -8,99 +8,9 @@ import ELECTRICIAN_3_IMG from "../assets/electrician_3.jpg";
 import PLUMBING_1_IMG from "../assets/plumbing_1.jpg";
 import PLUMBING_2_IMG from "../assets/plumbing_2.jpg";
 import PLUMBING_3_IMG from "../assets/plumbing_3.jpeg";
-
-// export const services = [
-//     {
-//         id: 1,
-//         title: "Complete Face Care",
-//         rating: "4.84",
-//         reviews: "1.7M",
-//         price: 667,
-//         duration: "1 hr 20 mins",
-//         services: [
-//             {
-//                 type: "Threading",
-//                 details: "Eyebrow, Upper lip",
-//             },
-//             {
-//                 type: "Facial",
-//                 details: "Crave beauty hydrating banana facial",
-//             },
-//         ],
-//     },
-//     {
-//         id: 2,
-//         title: "Glow Boost Facial",
-//         rating: "4.76",
-//         reviews: "980K",
-//         price: 799,
-//         duration: "1 hr 10 mins",
-//         services: [
-//             {
-//                 type: "Facial",
-//                 details: "Vitamin C brightening facial",
-//             },
-//             {
-//                 type: "Massage",
-//                 details: "Face and neck massage",
-//             },
-//         ],
-//     },
-//     {
-//         id: 3,
-//         title: "Luxury Hair Spa",
-//         rating: "4.92",
-//         reviews: "2.3M",
-//         price: 1199,
-//         duration: "1 hr 45 mins",
-//         services: [
-//             {
-//                 type: "Hair Treatment",
-//                 details: "Keratin smoothening treatment",
-//             },
-//             {
-//                 type: "Massage",
-//                 details: "Scalp nourishment massage",
-//             },
-//         ],
-//     },
-//     {
-//         id: 4,
-//         title: "Relaxing Body Massage",
-//         rating: "4.81",
-//         reviews: "750K",
-//         price: 1499,
-//         duration: "1 hr 30 mins",
-//         services: [
-//             {
-//                 type: "Massage",
-//                 details: "Deep tissue massage",
-//             },
-//             {
-//                 type: "Aromatherapy",
-//                 details: "Lavender essential oil relaxation",
-//             },
-//         ],
-//     },
-//     {
-//         id: 5,
-//         title: "Manicure & Pedicure",
-//         rating: "4.78",
-//         reviews: "1.2M",
-//         price: 899,
-//         duration: "1 hr",
-//         services: [
-//             {
-//                 type: "Manicure",
-//                 details: "Classic nail grooming and polish",
-//             },
-//             {
-//                 type: "Pedicure",
-//                 details: "Foot scrub and massage",
-//             },
-//         ],
-//     },
-// ];
+import BANNER_GARDENING_1 from "../assets/banner_gardening_1.jpg";
+import BANNER_PLUMBING_1 from "../assets/banner_plumbing_1.jpg";
+import BANNER_ELECTRICIAN_1 from "../assets/banner_electrician_1.jpg";
 
 export const services = [
     {
@@ -225,5 +135,26 @@ export const services = [
                 duration: "3-6 hours",
             },
         ],
+    },
+];
+
+export const bannerServices = [
+    {
+        id: 1,
+        image: BANNER_GARDENING_1,
+        title: "Professional Gardening & Landscaping",
+        price: 200.0,
+    },
+    {
+        id: 2,
+        image: BANNER_PLUMBING_1,
+        title: "Reliable Plumbing Services",
+        price: 150.0,
+    },
+    {
+        id: 3,
+        image: BANNER_ELECTRICIAN_1,
+        title: "Certified Electrician for Home & Office",
+        price: 150.0,
     },
 ];

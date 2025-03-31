@@ -1,6 +1,9 @@
 const TestimonialCard = ({ image, name, designation, review }) => {
     return (
-        <div className="rounded-lg border border-gray-200 p-4 h-full">
+        <div
+            className="rounded-lg border border-gray-200 p-4 h-full transition-all duration-300  
+                               hover:scale-105"
+        >
             <div className="flex items-center space-x-4 p-3">
                 <img
                     src={image}

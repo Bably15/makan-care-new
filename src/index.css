@@ -24,3 +24,13 @@ body {
 
     font-family: "Roboto", sans-serif;
 }
+
+.banner-swiper-container .swiper-pagination-bullet {
+    background: #ffffff !important; /* Change inactive dots to white */
+    opacity: 0.5;
+}
+
+.banner-swiper-container .swiper-pagination-bullet-active {
+    background: #ffffff !important; /* Change active dot to white */
+    opacity: 1;
+}

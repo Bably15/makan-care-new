@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import LOGO from "../../assets/logo.png";
 import CART_ICON from "../../assets/cart.png";
 import HEART_ICON from "../../assets/heart.png";
-import SHARED_ICON from "../../assets/SHARED.png";
 import Dropdown from "../../components/Dropdown/Dropdown";
 
 import ROCKET_IMG from "../../assets/inter-logo.png";
@@ -19,6 +18,7 @@ import { APPROUTES } from "../../constants/routes/appRoutes";
 
 const Header = () => {
     const cartData = useSelector((state) => state.cart);
+    const wishlistData = useSelector((state) => state.wishlist);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const handleSelect = useCategoryNavigation();
 
@@ -30,7 +30,9 @@ const Header = () => {
                         <div className="w-full px-2">
                             <ul className="list-none flex flex-nowrap justify-end items-center">
                                 <li className="mx-2">
-                                    <Link to={"/help-center"}>Help Center</Link>
+                                    <Link to={APPROUTES.HELP_CENTER}>
+                                        Help Center
+                                    </Link>
                                 </li>
                                 <li className="mx-2">
                                     <Link to={"/help-center"}>
@@ -107,17 +109,20 @@ const Header = () => {
                                         Register
                                     </Link>
                                 </div>
-                                <div className="flex justify-between">
-                                    <img
-                                        className="w-6 mx-2"
-                                        src={SHARED_ICON}
-                                        alt="Wishlist"
-                                    />
-                                    <img
-                                        className="w-6 ml-2"
-                                        src={HEART_ICON}
-                                        alt="Cart"
-                                    />
+                                <div className="flex justify-between gap-4">
+                                    <Link to={APPROUTES.WISHLIST}>
+                                        {" "}
+                                        <div className="relative">
+                                            <span className="flex justify-center items-center text-xs text-center bg-red-400 text-white rounded-full w-5 h-5 p-2 absolute -right-1 -top-2">
+                                                {wishlistData.totalQuantity}
+                                            </span>
+                                            <img
+                                                className="w-6 mr-2"
+                                                src={HEART_ICON}
+                                                alt="Wishlist"
+                                            />
+                                        </div>
+                                    </Link>
                                     <Link to={APPROUTES.CART}>
                                         <div className="relative">
                                             <span className="flex justify-center items-center text-xs text-center bg-red-400 text-white rounded-full w-5 h-5 p-2 absolute -right-1 -top-2">

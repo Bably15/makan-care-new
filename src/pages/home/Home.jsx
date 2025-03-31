@@ -10,6 +10,7 @@ import Testimonial from "../../components/Testimonials/Testimonial.jsx";
 import Features from "../../components/Features/Features.jsx";
 import BlogSection from "../../features/BlogSection/BlogSection.jsx";
 import { services } from "../../mocks/services.js";
+import HelpCenter from "../HelpCenter/HelpCenter.jsx";
 
 const Home = () => {
     return (

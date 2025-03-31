@@ -36,14 +36,6 @@ const Service2 = () => {
                                     What Our Clients Say
                                 </h2>
                             </div>
-                            <div>
-                                <button className="border border-gray-200 rounded-full p-2">
-                                    <i class="fa-solid fa-angle-left"></i>
-                                </button>
-                                <button className="border border-gray-200 rounded-full p-2">
-                                    <i class="fa-solid fa-angle-right"></i>
-                                </button>
-                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,3 @@
-import React from "react";
-import AboutUs from "../../components/AboutUs/About_us";
-import About2 from "../../components/About2/About2";
-
 import ProfileCard from "../../components/ProfileCard/ProfileCard";
 import { Link } from "react-router-dom";
 import BlogCard from "../../components/BlogCard/BlogCard";

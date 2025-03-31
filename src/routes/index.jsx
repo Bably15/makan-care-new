@@ -10,6 +10,8 @@ import MainLayout from "../layouts/mainLayout/MainLayout";
 import CartPage from "../pages/Cart/CartPage";
 import ShippingDetails from "../pages/ShippingDetails/ShippingDetails";
 import CheckoutPage from "../pages/CheckoutPage/CheckoutPage";
+import HelpCenter from "../pages/HelpCenter/HelpCenter";
+import WishlistPage from "../pages/WishlistPage/WishlistPage";
 
 const AppRoutes = () => {
     return (
@@ -21,6 +23,7 @@ const AppRoutes = () => {
                 <Route path={APPROUTES.SIGNUP} element={<SignUp />} />
 
                 <Route path={APPROUTES.ABOUT} element={<About />} />
+                <Route path={APPROUTES.HELP_CENTER} element={<HelpCenter />} />
                 <Route path={APPROUTES.CONTACT} element={<Contact />} />
                 <Route
                     path={APPROUTES.SERVICES}
@@ -33,6 +36,7 @@ const AppRoutes = () => {
                     element={<ServicePage />}
                 />
                 <Route path={APPROUTES.CART} element={<CartPage />} />
+                <Route path={APPROUTES.WISHLIST} element={<WishlistPage />} />
                 <Route
                     path={APPROUTES.SHIPPING}
                     element={<ShippingDetails />}

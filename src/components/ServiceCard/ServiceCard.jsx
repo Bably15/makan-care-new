@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../../features/cart/cartSlice";
 import useCart from "../../hooks/useCart";
 import { COMMON_CONSTANTS } from "../../constants/common/commonConstants";
+import useWishlist from "../../hooks/useWishlist";
 
 const ServiceCard = ({ service }) => {
     const {
@@ -17,9 +18,13 @@ const ServiceCard = ({ service }) => {
     } = service;
 
     const { handleAddToCart } = useCart();
+    const { handleAddToWishlist } = useWishlist();
 
     return (
-        <div className="p-4 py-10 w-full border-b-1 border-gray-200">
+        <div
+            className="p-4 py-10 w-full border-b-1 border-gray-200 transition-all duration-300 
+                               hover:scale-105"
+        >
             <div className="flex justify-between items-start">
                 <div>
                     {/* Header */}
@@ -40,12 +45,20 @@ const ServiceCard = ({ service }) => {
                     </p>
                 </div>
 
-                <button
-                    className="border border-[#6E42E5] text-[#6E42E5] hover:bg-[#6E42E5] hover:text-white px-4 py-2 rounded-md cursor-pointer"
-                    onClick={() => handleAddToCart(service)}
-                >
-                    Add
-                </button>
+                <div className="flex gap-4">
+                    <button
+                        className="border border-[#6E42E5] text-[#6E42E5] hover:bg-[#6E42E5] hover:text-white px-4 py-2 rounded-md cursor-pointer"
+                        onClick={() => handleAddToWishlist(service)}
+                    >
+                        Add to Wishlist
+                    </button>
+                    <button
+                        className="border border-[#6E42E5] text-[#6E42E5] hover:bg-[#6E42E5] hover:text-white px-4 py-2 rounded-md cursor-pointer"
+                        onClick={() => handleAddToCart(service)}
+                    >
+                        Add
+                    </button>
+                </div>
             </div>
             <hr className="my-4 w-40 text-gray-200" />
 

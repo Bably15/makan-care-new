@@ -6,7 +6,8 @@ const Card = ({ service }) => {
     const { handleAddToCart } = useCart();
 
     return (
-        <div className="rounded-lg border border-gray-200 p-4 h-full">
+        <div className="rounded-lg border border-gray-200 p-4 h-full transition-all duration-300 hover:bg-gray-200 
+                               hover:scale-105">
             <img
                 src={image}
                 alt={name}

@@ -8,6 +8,8 @@ export const APPROUTES = {
     SERVICE_DETAIL: "/services/:service",
     SERVICES_REDIRECT: "/services/gardening",
     CART: "/cart",
+    WISHLIST: "/wishlist",
     SHIPPING: "/shipping",
     CHECKOUT: "/checkout",
+    HELP_CENTER: "/help-center",
 };
