@@ -121,7 +121,7 @@ const Services = ({ service }) => {
                                         <div className="flex justify-stretch">
                                             <Link
                                                 to={APPROUTES.CART}
-                                                className="bg-[#6E42E5] p-2 w-full text-white text-center rounded-lg"
+                                                className="bg-[#6b4f36] p-2 w-full text-white text-center rounded-lg"
                                             >
                                                 View my Cart
                                             </Link>
@@ -157,7 +157,7 @@ const Services = ({ service }) => {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="font-bold text-[#6E42E5]">
+                                <div className="font-bold text-[#6b4f36]">
                                     View More Offers
                                 </div>
                             </div>
@@ -169,15 +169,15 @@ const Services = ({ service }) => {
                                     <ul className="text-xs">
                                         <li className="mb-3">
                                             <i class="fa-solid fa-check mr-2"></i>
-                                            4.5+ Rated Beauticians
+                                            4.5+ Rated Service
                                         </li>
                                         <li className="mb-3">
                                             <i class="fa-solid fa-check mr-2"></i>
-                                            Luxury Salon Experience
+                                            1000+ Satisfied Customers
                                         </li>
                                         <li className="mb-3">
                                             <i class="fa-solid fa-check mr-2"></i>
-                                            Premium Branded Products
+                                            Premium Service Options 
                                         </li>
                                     </ul>
                                 </div>

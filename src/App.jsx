@@ -19,21 +19,19 @@ import AppRoutes from "./routes/index.jsx";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import store from "./store/index.js";
-import OnlyHead from "./components/OnlyHead/OnlyHead.jsx";
-import Header from "./layouts/header/Header.jsx";
 import { ToastProvider } from "./context/ToastContext.jsx";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 
 const App = () => {
     return (
         <Provider store={store}>
-            <BrowserRouter>
-                <ToastProvider>
-                    {/* <Header /> */}
-                    <AppRoutes />
-                    {/* <Footer /> */}
-                    {/* <Footer2 /> */}
-                </ToastProvider>
-            </BrowserRouter>
+            <GoogleOAuthProvider clientId="464368740603-7dbeshdqpo540j7uu3ocl7dt1ughtsoh.apps.googleusercontent.com">
+                <BrowserRouter>
+                    <ToastProvider>
+                        <AppRoutes />
+                    </ToastProvider>
+                </BrowserRouter>
+            </GoogleOAuthProvider>
         </Provider>
     );
 };

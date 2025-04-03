@@ -3,7 +3,7 @@ import store from "../store/index";
 import { logout } from "../features/auth/authSlice";
 import { toast } from "react-toastify";
 
-const API_BASE_URL = "https://backend-api-url.com/api";
+const API_BASE_URL = "http://localhost:8080/api";
 
 const api = axios.create({
     baseURL: API_BASE_URL,

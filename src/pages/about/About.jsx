@@ -2,8 +2,8 @@ import ProfileCard from "../../components/ProfileCard/ProfileCard";
 import { Link } from "react-router-dom";
 import BlogCard from "../../components/BlogCard/BlogCard";
 
-import TEAM_IMG_1 from "../../assets/et2.jpg";
-import TEAM_IMG_2 from "../../assets/et1.jpg";
+import TEAM_IMG_1 from "../../assets/about_1.jpg";
+import TEAM_IMG_2 from "../../assets/about_2.jpg";
 
 import GOOGLE_LOGO from "../../assets/google_logo.png";
 import UBER_LOGO from "../../assets/uber_logo.png";
@@ -27,6 +27,8 @@ import BLOG_1_IMG from "../../assets/blog_1.png";
 import BLOG_2_IMG from "../../assets/blog_2.png";
 import BLOG_3_IMG from "../../assets/blog_3.png";
 import { COMMON_CONSTANTS } from "../../constants/common/commonConstants";
+import { blogData } from "../../mocks/blogs";
+import BlogCard2 from "../../components/BlogCard/BlogCard2";
 
 const teamMembers = [
     {
@@ -100,7 +102,7 @@ const About = () => {
     return (
         <>
             <div className="w-full py-5 pt-14 bg-gray-100">
-                <div className="max-w-5xl mx-auto p-4">
+                <div className="max-w-7xl 3xl:max-w-5xl mx-auto p-4">
                     <div className="flex flex-wrap -mx-2">
                         <div className="w-full sm:w-6/12">
                             <h2 className="text-[#0093FF] uppercase text-secondary mb-4">
@@ -127,7 +129,7 @@ const About = () => {
             </div>
 
             <div className="w-full py-4 sm:py-10 bg-gray-100">
-                <div className="max-w-5xl mx-auto p-4">
+                <div className="max-w-7xl 3xl:max-w-5xl mx-auto p-4">
                     <div className="flex flex-wrap justify-end -mx-2">
                         <div className="w-full sm:w-8/12">
                             <img className="mb-4" src={TEAM_IMG_1} alt="" />
@@ -140,8 +142,8 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="w-full py-4 sm:py-10 bg-gray-100">
-                <div className="max-w-5xl mx-auto p-4">
+            {/* <div className="w-full py-4 sm:py-10 bg-gray-100">
+                <div className="max-w-7xl 3xl:max-w-5xl mx-auto p-4">
                     <div className="flex flex-wrap justify-between items-center -mx-2">
                         <div className="w-full sm:w-5/12 gap-5">
                             <p className="text-center sm:text-start">
@@ -169,10 +171,10 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className="w-full py-4 sm:py-10 bg-gray-100">
-                <div className="max-w-5xl mx-auto p-4">
+                <div className="max-w-7xl 3xl:max-w-5xl mx-auto p-4">
                     <div className="flex flex-wrap justify-between items-center -mx-2">
                         <div className="w-full sm:w-7/12 gap-5">
                             <h2 className="text-3xl font-normal mb-8">
@@ -226,8 +228,8 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="w-full py-4 sm:py-10 bg-gray-100">
-                <div className="max-w-5xl mx-auto p-4">
+            {/* <div className="w-full py-4 sm:py-10 bg-gray-100">
+                <div className="max-w-7xl 3xl:max-w-5xl mx-auto p-4">
                     <div className="flex flex-wrap justify-between items-center -mx-2">
                         <div className="w-full gap-5">
                             <h2 className="text-3xl font-normal text-center mb-8">
@@ -243,10 +245,10 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className="w-full py-4 sm:py-10">
-                <div className="max-w-5xl mx-auto p-4">
+                <div className="max-w-7xl 3xl:max-w-5xl mx-auto p-4">
                     <div className="flex flex-wrap justify-between items-center -mx-2">
                         <div className="w-full flex items-start">
                             <h2 className="text-3xl font-normal mb-8 mr-5">
@@ -260,9 +262,9 @@ const About = () => {
                             </Link>
                         </div>
                         <div className="w-full">
-                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-center">
-                                {blogs.map((blog, index) => (
-                                    <BlogCard key={index} {...blog} />
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center">
+                                {blogData.map((blog, index) => (
+                                    <BlogCard2 key={index} {...blog} />
                                 ))}
                             </div>
                         </div>

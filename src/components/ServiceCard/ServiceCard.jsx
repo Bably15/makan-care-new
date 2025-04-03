@@ -33,7 +33,7 @@ const ServiceCard = ({ service }) => {
 
                     {/* Rating and Reviews */}
                     <div className="flex items-center text-gray-600 text-sm mt-1">
-                        <span className="text-[#6E42E5] text-lg">★</span>
+                        <span className="text-[#6b4f36] text-lg">★</span>
                         <span className="ml-1 font-semibold">{rating}</span>
                         <span className="ml-1">({reviews} reviews)</span>
                     </div>
@@ -47,13 +47,13 @@ const ServiceCard = ({ service }) => {
 
                 <div className="flex gap-4">
                     <button
-                        className="border border-[#6E42E5] text-[#6E42E5] hover:bg-[#6E42E5] hover:text-white px-4 py-2 rounded-md cursor-pointer"
+                        className="border border-[#6b4f36] text-[#6b4f36] hover:bg-[#6b4f36] hover:text-white px-4 py-2 rounded-md cursor-pointer"
                         onClick={() => handleAddToWishlist(service)}
                     >
                         Add to Wishlist
                     </button>
                     <button
-                        className="border border-[#6E42E5] text-[#6E42E5] hover:bg-[#6E42E5] hover:text-white px-4 py-2 rounded-md cursor-pointer"
+                        className="border border-[#6b4f36] text-[#6b4f36] hover:bg-[#6b4f36] hover:text-white px-4 py-2 rounded-md cursor-pointer"
                         onClick={() => handleAddToCart(service)}
                     >
                         Add

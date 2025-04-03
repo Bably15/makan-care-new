@@ -139,39 +139,19 @@ const Footer = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4">
                         <div className="flex items-center justify-center sm:justify-start gap-4">
                             <div className="border border-gray-200 p-1 rounded-full">
-                                <img
-                                    className="w-4"
-                                    src={facebookIcon}
-                                    alt="Facebook"
-                                />
+                                <i class="fa-brands fa-facebook-f" />
                             </div>
                             <div className="border border-gray-200 p-1 rounded-full">
-                                <img
-                                    className="w-10"
-                                    src={twitterIcon}
-                                    alt="twitter"
-                                />
+                                <i class="fa-brands fa-x-twitter" />
                             </div>
                             <div className="border border-gray-200 p-1 rounded-full">
-                                <img
-                                    className="w-4"
-                                    src={instagramIcon}
-                                    alt="instagram"
-                                />
+                                <i class="fa-brands fa-instagram" />
                             </div>
                             <div className="border border-gray-200 p-1 rounded-full">
-                                <img
-                                    className="w-4"
-                                    src={pinterestIcon}
-                                    alt="pinterest"
-                                />
+                                <i class="fa-brands fa-pinterest-p" />
                             </div>
                             <div className="border border-gray-200 p-1 rounded-full">
-                                <img
-                                    className="w-6"
-                                    src={youtubeIcon}
-                                    alt="youtube"
-                                />
+                                <i class="fa-brands fa-youtube" />
                             </div>
                         </div>
                         <div className="text-center">

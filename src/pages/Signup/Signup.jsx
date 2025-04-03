@@ -5,16 +5,18 @@ import {
     signUpFailure,
 } from "../../features/auth/authSlice";
 import { toast } from "react-toastify";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useForm from "../../hooks/useForm";
 import { signup } from "../../services/authService";
+import { APPROUTES } from "../../constants/routes/appRoutes";
 
 const Signup = () => {
     const dispatch = useDispatch();
     const { loading, error } = useSelector((state) => state.auth);
+    const navigate = useNavigate();
 
     const initialValues = {
-        name: "",
+        username: "",
         email: "",
         password: "",
         confirmPassword: "",
@@ -23,7 +25,7 @@ const Signup = () => {
 
     const validate = (values) => {
         let errors = {};
-        if (!values.name) errors.name = "Username is required!";
+        if (!values.username) errors.username = "Username is required!";
         if (!values.email) errors.email = "Email is required!";
         if (!values.password) errors.password = "Password is required!";
         if (values.password !== values.confirmPassword)
@@ -37,9 +39,9 @@ const Signup = () => {
         dispatch(signUpRequest());
         try {
             const user = await signup(formData);
-
             dispatch(signUpSuccess(user));
             toast.success("Signup successful!");
+            navigate(APPROUTES.HOME);
         } catch (err) {
             dispatch(signUpFailure("Signup failed!"));
             toast.error("Signup failed!");
@@ -52,7 +54,7 @@ const Signup = () => {
     return (
         <div className="flex justify-center items-center min-h-screen bg-gray-100">
             <div className="w-full max-w-md bg-white p-6 rounded-lg shadow-lg">
-                <h2 className="text-2xl font-semibold text-center text-teal-500">
+                <h2 className="text-2xl font-semibold text-center text-[#6b4f36]">
                     Sign Up
                 </h2>
 
@@ -65,9 +67,9 @@ const Signup = () => {
                 >
                     <input
                         type="text"
-                        name="name"
-                        placeholder="Name"
-                        value={values.name}
+                        name="username"
+                        placeholder="Username"
+                        value={values.username}
                         onChange={handleChange}
                         onBlur={handleBlur}
                         className="p-2 w-full border border-gray-200 rounded-md"
@@ -140,7 +142,7 @@ const Signup = () => {
                     <button
                         type="submit"
                         disabled={loading}
-                        className="w-full bg-teal-500 text-white p-2 rounded-md hover:bg-teal-600"
+                        className="w-full bg-[#6b4f36] text-white p-2 rounded-md hover:bg-stone-900 cursor-pointer"
                     >
                         {loading ? "Signing Up..." : "Create Account"}
                     </button>
@@ -149,7 +151,7 @@ const Signup = () => {
                         Already have an account?{" "}
                         <Link
                             to="/login"
-                            className="text-teal-500 hover:underline"
+                            className="text-[#6b4f36] hover:underline"
                         >
                             Sign In
                         </Link>

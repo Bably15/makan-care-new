@@ -19,6 +19,7 @@ import { APPROUTES } from "../../constants/routes/appRoutes";
 const Header = () => {
     const cartData = useSelector((state) => state.cart);
     const wishlistData = useSelector((state) => state.wishlist);
+    const authData = useSelector((state) => state.auth);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const handleSelect = useCategoryNavigation();
 
@@ -94,48 +95,52 @@ const Header = () => {
                         </div>
                         <div className="w-full sm:w-4/12 px-2 my-auto">
                             <div className="flex justify-end items-center">
-                                <div className="pr-4 mr-4 border-r-1 border-gray-300">
-                                    <Link
-                                        to={APPROUTES.LOGIN}
-                                        className="hover:bg-gray-100 p-2"
-                                    >
-                                        Login
-                                    </Link>{" "}
-                                    /{" "}
-                                    <Link
-                                        to={APPROUTES.SIGNUP}
-                                        className="hover:bg-gray-100 p-2"
-                                    >
-                                        Register
-                                    </Link>
-                                </div>
-                                <div className="flex justify-between gap-4">
-                                    <Link to={APPROUTES.WISHLIST}>
-                                        {" "}
-                                        <div className="relative">
-                                            <span className="flex justify-center items-center text-xs text-center bg-red-400 text-white rounded-full w-5 h-5 p-2 absolute -right-1 -top-2">
-                                                {wishlistData.totalQuantity}
-                                            </span>
-                                            <img
-                                                className="w-6 mr-2"
-                                                src={HEART_ICON}
-                                                alt="Wishlist"
-                                            />
-                                        </div>
-                                    </Link>
-                                    <Link to={APPROUTES.CART}>
-                                        <div className="relative">
-                                            <span className="flex justify-center items-center text-xs text-center bg-red-400 text-white rounded-full w-5 h-5 p-2 absolute -right-1 -top-2">
-                                                {cartData.totalQuantity}
-                                            </span>
-                                            <img
-                                                className="w-6 mx-2"
-                                                src={CART_ICON}
-                                                alt="Wishlist"
-                                            />
-                                        </div>
-                                    </Link>
-                                </div>
+                                {!authData.isAuthenticated && (
+                                    <div className="pr-4 mr-4 border-r-1 border-gray-300">
+                                        <Link
+                                            to={APPROUTES.LOGIN}
+                                            className="hover:bg-gray-100 p-2"
+                                        >
+                                            Login
+                                        </Link>{" "}
+                                        /{" "}
+                                        <Link
+                                            to={APPROUTES.SIGNUP}
+                                            className="hover:bg-gray-100 p-2"
+                                        >
+                                            Register
+                                        </Link>
+                                    </div>
+                                )}
+                                {authData.isAuthenticated && (
+                                    <div className="flex justify-between gap-4">
+                                        <Link to={APPROUTES.WISHLIST}>
+                                            {" "}
+                                            <div className="relative">
+                                                <span className="flex justify-center items-center text-xs text-center bg-red-400 text-white rounded-full w-5 h-5 p-2 absolute -right-1 -top-2">
+                                                    {wishlistData.totalQuantity}
+                                                </span>
+                                                <img
+                                                    className="w-6 mr-2"
+                                                    src={HEART_ICON}
+                                                    alt="Wishlist"
+                                                />
+                                            </div>
+                                        </Link>
+                                        <Link to={APPROUTES.CART}>
+                                            <div className="relative">
+                                                <span className="flex justify-center items-center text-xs text-center bg-red-400 text-white rounded-full w-5 h-5 p-2 absolute -right-1 -top-2">
+                                                    {cartData.totalQuantity}
+                                                </span>
+                                                <img
+                                                    className="w-6 mx-2"
+                                                    src={CART_ICON}
+                                                    alt="Wishlist"
+                                                />
+                                            </div>
+                                        </Link>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>
