@@ -10,7 +10,7 @@ const CartPage = () => {
     const navigate = useNavigate();
 
     const handleCheckout = () => {
-        navigate(APPROUTES.SHIPPING);
+        navigate(APPROUTES.ADDRESS);
     };
 
     return (
@@ -33,10 +33,10 @@ const CartPage = () => {
                     </span>
                 </p>
                 <button
-                    className="bg-black hover:bg-gray-700 text-white px-6 py-2 rounded cursor-pointer"
+                    className="bg-[#6b4f36] hover:bg-stone-900 text-white px-6 py-2 rounded cursor-pointer"
                     onClick={handleCheckout}
                 >
-                    CHECK OUT
+                    Add address and slot
                 </button>
             </div>
         </div>

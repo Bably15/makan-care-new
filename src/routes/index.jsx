@@ -12,6 +12,9 @@ import ShippingDetails from "../pages/ShippingDetails/ShippingDetails";
 import CheckoutPage from "../pages/CheckoutPage/CheckoutPage";
 import HelpCenter from "../pages/HelpCenter/HelpCenter";
 import WishlistPage from "../pages/WishlistPage/WishlistPage";
+import ProfilePage from "../pages/ProfilePage/ProfilePage";
+import AddressMap from "../pages/AddressPickerPage/AddressPickerPage";
+import SlotBooking from "../components/SlotBooking/SlotBooking";
 
 const AppRoutes = () => {
     return (
@@ -36,12 +39,18 @@ const AppRoutes = () => {
                     element={<ServicePage />}
                 />
                 <Route path={APPROUTES.CART} element={<CartPage />} />
+                <Route path={APPROUTES.PROFILE} element={<ProfilePage />} />
                 <Route path={APPROUTES.WISHLIST} element={<WishlistPage />} />
+                <Route path={APPROUTES.ADDRESS} element={<AddressMap />} />
                 <Route
                     path={APPROUTES.SHIPPING}
                     element={<ShippingDetails />}
                 />
                 <Route path={APPROUTES.CHECKOUT} element={<CheckoutPage />} />
+                <Route
+                    path={APPROUTES.SLOT_BOOKING}
+                    element={<SlotBooking />}
+                />
             </Route>
         </Routes>
     );

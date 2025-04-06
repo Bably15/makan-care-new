@@ -21,6 +21,7 @@ import { BrowserRouter } from "react-router-dom";
 import store from "./store/index.js";
 import { ToastProvider } from "./context/ToastContext.jsx";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import "leaflet/dist/leaflet.css";
 
 const App = () => {
     return (

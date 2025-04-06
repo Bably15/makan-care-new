@@ -26,9 +26,24 @@ const Login = () => {
         return errors;
     };
     const loginWithGoogle = useGoogleLogin({
+        scope: "openid email profile",
         onSuccess: async (response) => {
-            const user = response;
-            dispatch(loginSuccess(user));
+            // const user = response;
+            const userInfoResponse = await fetch(
+                "https://www.googleapis.com/oauth2/v3/userinfo",
+                {
+                    headers: {
+                        Authorization: `Bearer ${response.access_token}`,
+                    },
+                }
+            );
+
+            let userData = await userInfoResponse.json();
+            userData = {
+                ...userData,
+                username: userData.name,
+            };
+            dispatch(loginSuccess(userData));
             toast.success("Google Login Successful!", { autoClose: 5000 });
             navigate(APPROUTES.HOME);
         },

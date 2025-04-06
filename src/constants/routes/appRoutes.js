@@ -10,6 +10,9 @@ export const APPROUTES = {
     CART: "/cart",
     WISHLIST: "/wishlist",
     SHIPPING: "/shipping",
+    ADDRESS: "/address",
     CHECKOUT: "/checkout",
     HELP_CENTER: "/help-center",
+    PROFILE: "/profile",
+    SLOT_BOOKING: "/slot-booking",
 };

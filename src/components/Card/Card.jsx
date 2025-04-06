@@ -40,7 +40,7 @@ const Card = ({ service }) => {
                     className="bg-[#6b4f36] hover:bg-yellow-950 text-white text-sm border-none px-4 py-2 rounded-md cursor-pointer uppercase"
                     onClick={() => handleAddToCart(service)}
                 >
-                    Add to Cart
+                    Add
                 </button>
             </div>
         </div>
