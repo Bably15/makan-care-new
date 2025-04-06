@@ -114,39 +114,39 @@ const Header = () => {
                                 )}
 
                                 {authData.isAuthenticated && (
-                                    <div className="flex justify-between items-center gap-4">
-                                        <Link
-                                            to={APPROUTES.PROFILE}
-                                            className="rounded-full border border-gray-400 hover:bg-gray-100 p-1 text-center mr-4"
-                                        >
-                                            <i class="fa-regular fa-user w-6"></i>
-                                        </Link>
-                                        <Link to={APPROUTES.WISHLIST}>
-                                            <div className="relative">
-                                                <span className="flex justify-center items-center text-xs text-center bg-red-400 text-white rounded-full w-5 h-5 p-2 absolute -right-1 -top-2">
-                                                    {wishlistData.totalQuantity}
-                                                </span>
-                                                <img
-                                                    className="w-6 mr-2"
-                                                    src={HEART_ICON}
-                                                    alt="Wishlist"
-                                                />
-                                            </div>
-                                        </Link>
-                                        <Link to={APPROUTES.CART}>
-                                            <div className="relative">
-                                                <span className="flex justify-center items-center text-xs text-center bg-red-400 text-white rounded-full w-5 h-5 p-2 absolute -right-1 -top-2">
-                                                    {cartData.totalQuantity}
-                                                </span>
-                                                <img
-                                                    className="w-6 mx-2"
-                                                    src={CART_ICON}
-                                                    alt="Wishlist"
-                                                />
-                                            </div>
-                                        </Link>
-                                    </div>
+                                    <Link
+                                        to={APPROUTES.PROFILE}
+                                        className="rounded-full border border-gray-400 hover:bg-gray-100 p-1 text-center mr-6"
+                                    >
+                                        <i class="fa-regular fa-user w-6"></i>
+                                    </Link>
                                 )}
+                                <div className="flex justify-between items-center gap-4">
+                                    <Link to={APPROUTES.WISHLIST}>
+                                        <div className="relative">
+                                            <span className="flex justify-center items-center text-xs text-center bg-red-400 text-white rounded-full w-5 h-5 p-2 absolute -right-1 -top-2">
+                                                {wishlistData.totalQuantity}
+                                            </span>
+                                            <img
+                                                className="w-6 mr-2"
+                                                src={HEART_ICON}
+                                                alt="Wishlist"
+                                            />
+                                        </div>
+                                    </Link>
+                                    <Link to={APPROUTES.CART}>
+                                        <div className="relative">
+                                            <span className="flex justify-center items-center text-xs text-center bg-red-400 text-white rounded-full w-5 h-5 p-2 absolute -right-1 -top-2">
+                                                {cartData.totalQuantity}
+                                            </span>
+                                            <img
+                                                className="w-6 mx-2"
+                                                src={CART_ICON}
+                                                alt="Wishlist"
+                                            />
+                                        </div>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
