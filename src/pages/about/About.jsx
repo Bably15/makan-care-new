@@ -130,13 +130,10 @@ const About = () => {
 
             <div className="w-full py-4 sm:py-10 bg-gray-100">
                 <div className="max-w-7xl 3xl:max-w-5xl mx-auto p-4">
-                    <div className="flex flex-wrap justify-end -mx-2">
+                    <div className="flex flex-wrap justify-center -mx-2">
                         <div className="w-full sm:w-8/12">
                             <img className="mb-4" src={TEAM_IMG_1} alt="" />
-                            <p className="text-center sm:text-end">
-                                On a mission to remove the complexity of
-                                application development on Kubernetes
-                            </p>
+                          
                         </div>
                     </div>
                 </div>

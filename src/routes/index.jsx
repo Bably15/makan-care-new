@@ -15,7 +15,7 @@ import WishlistPage from "../pages/WishlistPage/WishlistPage";
 import ProfilePage from "../pages/ProfilePage/ProfilePage";
 import AddressMap from "../pages/AddressPickerPage/AddressPickerPage";
 import SlotBooking from "../components/SlotBooking/SlotBooking";
-
+import AuthPage from "../pages/AuthPage/AuthPage";
 const AppRoutes = () => {
     return (
         <Routes>
@@ -24,7 +24,7 @@ const AppRoutes = () => {
 
                 <Route path={APPROUTES.LOGIN} element={<Login />} />
                 <Route path={APPROUTES.SIGNUP} element={<SignUp />} />
-
+                <Route path={APPROUTES.AUTH} element={<AuthPage />} />
                 <Route path={APPROUTES.ABOUT} element={<About />} />
                 <Route path={APPROUTES.HELP_CENTER} element={<HelpCenter />} />
                 <Route path={APPROUTES.CONTACT} element={<Contact />} />

@@ -1,6 +1,7 @@
 export const APPROUTES = {
     LOGIN: "/login",
     SIGNUP: "/signup",
+    AUTH: "/auth",
     HOME: "/",
     ABOUT: "/about",
     CONTACT: "/contact",
